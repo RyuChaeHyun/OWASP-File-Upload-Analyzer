@@ -1,5 +1,5 @@
 # 🛡️ OWASP File Security Testing Platform
-> "총 12종의 파일 업로드/다운로드 라이브러리의 취약점을 **심층 연구**하고 **테스트**할 수 있는 **보안 전문가**를 위해 제작된 종합 테스트 플랫폼"
+"총 12종의 파일 업로드/다운로드 라이브러리의 취약점을 **심층 연구**하고 **테스트**할 수 있는 **보안 전문가**를 위해 제작된 종합 테스트 플랫폼"
 
 <br>
 
@@ -67,27 +67,84 @@
 ### 4️⃣ 결과
 - 파일 취약점 테스트 시간 단축
 - 라이브러리 설정별 취약점 탐지 정확도 향상
-- 보안 연구자들이 테스트 환경을 손쉽게 구축하고 활용 가능
+- 보안 전문가들이 테스트 환경을 손쉽게 구축하고 활용 가능
 
 <br>
 
 
-
-
 ## 🚀 설치 및 실행 방법
-### 1️⃣ 클론 및 설치
+
+### 1️⃣ 필수 프로그램 설치
+
+#### Git 설치
+운영체제에 맞는 명령어로 Git을 설치해주세요:
+
+**Windows**
 ```bash
-git clone https://github.com/your-repo/file-security-platform.git
-
-cd file-security-platform
-
-npm install
-
+# Windows의 경우 chocolatey 패키지 매니저 사용
+choco install git
 ```
 
-### 3️⃣ 실행
+**Mac**
 ```bash
+# Homebrew를 통한 설치
+brew install git
+```
+
+**Linux (Ubuntu/Debian)**
+```bash
+sudo apt-get update
+sudo apt-get install git
+```
+
+버전 확인:
+```bash
+git --version
+```
+
+#### Node.js 설치 및 버전 확인
+- [Node.js](https://nodejs.org/) 설치 (v20.16.0 또는 v20.18.0)
+- npm v10.8.1 (Node 설치 시 자동으로 설치됨)
+
+현재 버전 확인:
+```bash
+node -v
+npm -v
+```
+
+> 💡 **다른 Node 버전을 사용 중이신가요?**
+> nvm(Node Version Manager)을 통해 버전 변경이 가능합니다:
+> ```bash
+> nvm install 20.18.0  # 필요한 버전 설치
+> nvm use 20.18.0      # 해당 버전으로 전환
+> ```
+
+### 2️⃣ 프로젝트 설치 및 실행
+
+1. **코드 다운로드**
+```bash
+# 프로젝트 다운로드
+git clone https://github.com/yourusername/file-security-platform.git
+
+# 프로젝트 폴더로 이동
+cd file-security-platform
+```
+
+2. **패키지 설치 및 실행**
+```bash
+# 필요한 패키지 설치
+npm install
+
+# 프로그램 실행
 npm start
 ```
 
-웹 브라우저에서 http://localhost:3000으로 접속하여 플랫폼을 이용하세요.
+3. **플랫폼 접속**
+- 웹 브라우저에서 [http://localhost:3000](http://localhost:3000) 접속
+- 자동으로 브라우저가 열리지 않는 경우 위 주소를 직접 입력해주세요
+
+> 🚨 **문제 해결**
+> - Node 버전 불일치: 위의 nvm 명령어로 버전을 맞춰주세요
+> - 실행 오류 발생 시: 3000번 포트 사용 여부를 확인해주세요
+> - npm 관련 오류: `npm cache clean --force` 실행 후 다시 시도해보세요
+> - Git 설치 문제: 각 운영체제의 패키지 매니저(chocolatey, brew, apt)가 설치되어 있는지 확인해주세요
