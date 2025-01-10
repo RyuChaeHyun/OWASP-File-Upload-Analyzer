@@ -77,12 +77,12 @@
 ### 1️⃣ 필수 프로그램 설치
 
 #### Git 설치
-운영체제에 맞는 명령어로 Git을 설치해주세요:
+운영체제에 맞는 명령어로 Git을 설치해주세요.
 
 **Windows**
 ```bash
-# Windows의 경우 chocolatey 패키지 매니저 사용
-choco install git
+# Windows의 경우 아래 설치 경로를 입력하면 자동 설치
+http://git-scm.com/download/win
 ```
 
 **Mac**
@@ -102,6 +102,8 @@ sudo apt-get install git
 git --version
 ```
 
+<br>
+
 #### Node.js 설치 및 버전 확인
 - [Node.js](https://nodejs.org/) 설치 (v20.16.0 또는 v20.18.0)
 - npm v10.8.1 (Node 설치 시 자동으로 설치됨)
@@ -119,12 +121,14 @@ npm -v
 > nvm use 20.18.0      # 해당 버전으로 전환
 > ```
 
+<br>
+
 ### 2️⃣ 프로젝트 설치 및 실행
 
 1. **코드 다운로드**
 ```bash
 # 프로젝트 다운로드
-git clone https://github.com/yourusername/file-security-platform.git
+git clone https://github.com/RyuChaeHyun/OWASP-File-Upload-Analyzer.git
 
 # 프로젝트 폴더로 이동
 cd file-security-platform
